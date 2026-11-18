@@ -15,13 +15,15 @@ public class LevelSystem : MonoBehaviour
         int exp = 0;
         int level = 1;
 
+
         for (int i = 0; i < killCount; i++)
         {
-            for (int Lv = exp += 10000; exp >= 10000; exp -= 10000)
-                //(int L = 1; i <= 4; i++) level += i;
-        Debug.Log("레벨업! " + level + "Lv" + "(" + killCount + " 마리째)");
+            for (int Lv = exp += expPerKill; exp >= level * 10000; exp -= level * 10000, level++)
+
+            Debug.Log("레벨업! " + level + "Lv" + "(" + killCount + " 마리째)");
         }
 
+        Debug.Log("최종 Lv" + level + "Lv, 경험치 " + exp + " / " + level * 10000);
     }
 
 
@@ -29,7 +31,7 @@ public class LevelSystem : MonoBehaviour
 
 
 
-
+  
 
 
 
